@@ -52,13 +52,6 @@ boolean updateEncoders()
   return changeState;
 }
 
-void printEncoders()
-{ // print current count of each encoder to Serial
-  for (int i=0; i<NUMENCODERS; i++)
-  {
-    MIDI.sendNoteOn(encoder[i].count, velocity, channel);  // Turn the note on.
-  }
-}
 
 int8_t readEncoder(byte i)
 { // this function is called within timer interrupt to read one encoder!
